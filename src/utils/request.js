@@ -36,7 +36,7 @@ import router from '@/router'
 
 const service = axios.create({
   baseURL: '/',
-  timeout: 1000,
+  timeout: 10000,
   withCredentials: true,
 })
 
