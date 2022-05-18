@@ -34,6 +34,7 @@ export default env => {
 
   return defineConfig({
     // base: '/vue3-element-admin-site/',
+
     plugins: [
       vue(),
       viteMockServe({
@@ -79,6 +80,7 @@ export default env => {
           rewrite: path => path.replace(/^\/api/, ''),
         },
       },
+      port: 3004,
     },
     esbuild: false,
     build: {
