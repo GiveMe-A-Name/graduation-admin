@@ -29,6 +29,7 @@
     </div>
     <div class="btn">
       <el-button type="primary" plain @click="handleSave">保存</el-button>
+      <el-button type="primary" plain @click="handleBack">取消</el-button>
     </div>
   </div>
 </template>
@@ -74,9 +75,14 @@ export default defineComponent({
         window.alert('保存失败')
       }
     }
+
+    const handleBack = () => {
+      closeTag.value({ reload: true })
+    }
     return {
       course,
       handleSave,
+      handleBack,
     }
   },
 })
@@ -96,6 +102,9 @@ export default defineComponent({
     margin-top: 20px;
   }
   > .btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
     margin-top: 20px;
   }
 }
